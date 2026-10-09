@@ -8,7 +8,7 @@ Rails.application.configure do
   config.require_master_key = true
   config.public_file_server.headers = { "cache-control" => "public, max-age=#{1.year.to_i}" }
   config.active_storage.service = :local
-  config.active_support.report deprecations = false
+  config.active_support.report_deprecations = false
   config.log_level = ENV.fetch("RAILS_LOG_LEVEL", "info")
   config.log_tags = [:request_id]
   config.action_mailer.perform_caching = false
