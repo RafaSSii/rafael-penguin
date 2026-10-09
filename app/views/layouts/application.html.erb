@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <title>Rafael Penguin — Tecnologia e desenvolvimento</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="Blog pessoal sobre tecnologia, desenvolvimento e Linux.">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= stylesheet_link_tag "tailwind", "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
+  </head>
+  <body class="min-h-screen bg-slate-950 text-slate-100 antialiased">
+    <header class="border-b border-slate-800">
+      <nav class="mx-auto flex max-w-5xl items-center justify-between px-6 py-5" aria-label="Navegação principal">
+        <%= link_to root_path, class: "text-lg font-bold tracking-tight text-white" do %>
+          Rafael <span class="text-cyan-400">Penguin</span>
+        <% end %>
+        <span class="text-sm text-slate-400">Tecnologia · Código · Linux</span>
+      </nav>
+    </header>
+    <main class="mx-auto max-w-5xl px-6 py-16">
+      <%= yield %>
+    </main>
+    <footer class="border-t border-slate-800">
+      <div class="mx-auto max-w-5xl px-6 py-8 text-sm text-slate-500">
+        Feito com curiosidade e código.
+      </div>
+    </footer>
+  </body>
+</html>

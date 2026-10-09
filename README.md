@@ -1,22 +1,55 @@
 # Rafael Penguin
 
-Blog pessoal de tecnologia, desenvolvimento e Linux.
+Blog pessoal sobre tecnologia, desenvolvimento de software e Linux, feito com Ruby on Rails, PostgreSQL e Tailwind CSS.
 
-## Objetivo
+## Stack inicial
 
-Construir um blog técnico independente com Ruby on Rails, PostgreSQL e Tailwind CSS, priorizando simplicidade, acessibilidade e facilidade de manutenção.
+- Ruby 3.3
+- Ruby on Rails 8
+- PostgreSQL
+- Tailwind CSS via `tailwindcss-rails`
+- Hotwire (Turbo e Stimulus)
 
-## Plano inicial
+## Requisitos
 
-- [ ] Gerar a aplicação Rails e configurar o PostgreSQL.
-- [ ] Configurar Tailwind CSS.
-- [ ] Criar a página inicial com listagem de artigos.
-- [ ] Criar páginas individuais para artigos.
-- [ ] Adicionar painel administrativo e autenticação.
-- [ ] Escrever testes automatizados e documentar a execução local.
+- Ruby 3.3.x e Bundler
+- PostgreSQL instalado e em execução
+
+## Preparar o ambiente
+
+1. Instale as dependências Ruby:
+
+   ```sh
+   bundle install
+   ```
+
+2. Configure as variáveis de ambiente do banco, se necessário:
+
+   ```sh
+   export DB_HOST=localhost
+   export DB_USER="$USER"
+   # Defina DB_PASSWORD apenas se o PostgreSQL exigir senha.
+   ```
+
+3. Prepare o banco e inicie a aplicação:
+
+   ```sh
+   bin/rails db:prepare
+   bin/dev
+   ```
+
+4. Abra http://localhost:3000.
+
+## Testes
+
+```sh
+bin/rails test
+```
 
 ## Desenvolvimento
 
-O trabalho de desenvolvimento será feito na branch `development`; a branch `main` ficará reservada para versões estáveis.
+Trabalhe na branch `development`. A `main` deve permanecer como a linha estável, recebendo alterações por Pull Request após revisão.
 
-> Status: planejamento inicial. A aplicação Rails ainda precisa ser gerada e testada em um ambiente Ruby/Rails.
+## Estado atual
+
+A estrutura inicial de Rails, a configuração de PostgreSQL, o ponto de entrada do Tailwind e uma página inicial de demonstração foram adicionados. O projeto ainda precisa ser instalado e validado em um ambiente com Ruby e PostgreSQL; os testes não foram executados nesta etapa.
