@@ -28,8 +28,6 @@ Blog pessoal sobre tecnologia, desenvolvimento de software e Linux, feito com Ru
    ```sh
    export DB_HOST=localhost
    export DB_USER="$USER"
-   # Defina DB_PASSWORD apenas se o PostgreSQL exigir senha.
-   ```
 
 3. Prepare o banco e inicie a aplicação:
 
